@@ -1,5 +1,5 @@
 ---
-title: Quick-start
+title: Platform Access
 deprecated: false
 hidden: false
 metadata:
