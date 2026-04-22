@@ -5,8 +5,6 @@ hidden: false
 metadata:
   robots: index
 ---
-## Actions Queue
-
 The **Queue** page shows every job that has been dispatched across all your instances.
 
 **Columns**
