@@ -21,7 +21,7 @@ Click on an instance from the Projects view to open its **Console**. The console
 
 **Tab bar** — up to eight tabs depending on instance stage and member permissions.
 
-### 6.2 Quick Actions
+### Quick Actions
 
 A row of action buttons sits just below the header. Buttons are shown only when the current user has the corresponding permission.
 
@@ -37,10 +37,10 @@ A row of action buttons sits just below the header. Buttons are shown only when 
 
 Clicking **Restart** opens a modal with two modes:
 
-| Mode             | What happens                                                                                                                                    |
-| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Soft Restart** | Runs an Odoo module upgrade (`-u all`) and restarts the Odoo service. Use this after deploying code changes.                                    |
-| **Hard Restart** | Stops and recreates the Docker containers from scratch. Use this when the Odoo process is unresponsive or after changing Docker-level settings. |
+| Mode             | What happens                                                                                                                                                                                                   |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Soft Restart** | Manually pulls codebase updates and restarts the Odoo service and background services, without restarting full container ( useful in rare cases such as manual code changes cause git conflicts in Web Editor) |
+| **Hard Restart** | Stops and recreates the Docker containers from scratch. Use this when the Odoo process is unresponsive or after changing Docker-level or Nginx Settings.                                                       |
 
 #### Connect As User
 
@@ -54,7 +54,7 @@ Enter the **target branch** name in the merge modal and confirm. CICDoo will git
 
 Type `DELETE` in the confirmation input (case-sensitive) to irreversibly remove the instance and all its data. The **Remove** button is only visible on Dev and Staging instances — Production instances cannot be removed from the console.
 
-### 6.3 Commits Tab
+### Commits Tab
 
 Displays the most recent Git commits on the instance's branch in a table:
 
@@ -65,7 +65,7 @@ Displays the most recent Git commits on the instance's branch in a table:
 
 Click **Refresh** to reload the list.
 
-### 6.4 Access Tab
+### Access Tab
 
 All credentials and connection details needed to access the instance are shown here.
 
@@ -96,12 +96,12 @@ The public Odoo URL. Click **Copy** to copy it to the clipboard.
 A ready-to-paste SSH tunnel command that forwards the PostgreSQL port to your local machine:
 
 ```text
-ssh -L <postgres_port>:localhost:<postgres_port> -N -f <user>@<instance_domain>
+ssh -L <postgres_port>:localhost:<postgres_port> -N -f <user>@<instance_domain|host_IP_if_behind_cloudflare>
 ```
 
 Copy this command and run it in a local terminal to connect a database client (e.g., DBeaver, pgAdmin, psql) directly to the instance database.
 
-### 6.5 Queue Tab
+### Queue Tab
 
 Shows recent jobs dispatched for this instance:
 
@@ -114,7 +114,7 @@ Shows recent jobs dispatched for this instance:
 
 Click the **log icon** on any row to view the full job output in a modal. Click **Refresh** to reload.
 
-### 6.6 Logs Tab
+### Logs Tab
 
 Real-time view of the Odoo application logs.
 
@@ -130,7 +130,7 @@ Real-time view of the Odoo application logs.
 
 The log panel uses a dark terminal-style display. The footer shows the total line count and the timestamp of the last update.
 
-### 6.7 Monitoring Tab
+### Monitoring Tab
 
 Real-time and historical resource usage charts for the instance containers.
 
@@ -151,11 +151,11 @@ Two chart groups are displayed:
 
 Each chart supports zoom (scroll or pinch). Click any point on a chart to open the log viewer filtered to the corresponding timestamp. Loading and error states are handled gracefully.
 
-### 6.8 Backups Tab
+### Backups Tab
 
 Available on Production and Staging instances only (requires `perm_instance_backup` and `allow_backup`). See §9 for full details.
 
-### 6.9 Settings Tab — Odoo
+### Settings Tab — Odoo
 
 The **Settings** tab contains six sub-tabs. Each sub-tab has its own **Save** button — changes are not applied until saved.
 
@@ -187,7 +187,7 @@ limit_time_real = 1200
 
 Click **Save Odoo Configuration** to apply.
 
-### 6.10 Settings Tab — PostgreSQL
+### Settings Tab — PostgreSQL
 
 | Field                    | Default       | Description                                                                                                                 |
 | ------------------------ | ------------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -200,7 +200,7 @@ Click **Save Odoo Configuration** to apply.
 
 Click **Save PostgreSQL Configuration** to apply.
 
-### 6.11 Settings Tab — Security
+### Settings Tab — Security
 
 > **Plan requirement:** IP whitelisting requires `allow_ip_whitelist`.
 
@@ -216,7 +216,7 @@ Click **Save PostgreSQL Configuration** to apply.
 
 Click **Save Security Settings** to apply.
 
-### 6.12 Settings Tab — Domain
+### Settings Tab — Domain
 
 | Field              | Description                                                                                                                         |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -229,7 +229,7 @@ Click **Save Security Settings** to apply.
 
 Click **Save Domain Settings** to apply.
 
-### 6.13 Settings Tab — Nginx
+### Settings Tab — Nginx
 
 > **Plan requirement:** Requires `allow_nginx_tuning`.
 
@@ -244,7 +244,7 @@ Click **Save Domain Settings** to apply.
 
 Click **Save Nginx Settings** to apply.
 
-### 6.14 Settings Tab — Packages
+### Settings Tab — Packages
 
 Add extra system packages to the Odoo or PostgreSQL container. Changing packages triggers a container rebuild on the next deploy.
 
