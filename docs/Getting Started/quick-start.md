@@ -7,12 +7,13 @@ metadata:
 ---
 ### Creating an Account
 
-Navigate to the CICDoo sign-up page and complete the registration form:
+Navigate to the CICDoo [sign-up]() page and complete the registration form:
 
 | Field    | Description                                             |
 | -------- | ------------------------------------------------------- |
 | Name     | Your full name                                          |
 | Email    | Used for login and notifications                        |
+| Company  | If you are a company ( optional )                       |
 | Password | Minimum length enforced; shown/hidden with the eye icon |
 
 After submitting, a verification email is sent to the address you provided. Click the link inside to activate your account before logging in.
