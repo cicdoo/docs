@@ -1,11 +1,10 @@
 ---
-title: Welcome to cicdoo
+title: Welcome to cıcdoo
+excerpt: >-
+  Welcome to cıcdoo - the effortless platform for deploying and managing Odoo
+  environments.
 hidden: false
 ---
-<Accordion title="My Accordion Title" icon="fa-info-circle">
-  Lorem ipsum dolor sit amet, **consectetur adipiscing elit.** Ut enim
-  ad minim veniam, quis nostrud exercitation ullamco. Excepteur sint
-  occaecat cupidatat non proident!
-</Accordion>
+### Quick Start
 
 <br />
