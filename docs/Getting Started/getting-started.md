@@ -7,8 +7,6 @@ next:
       title: Getting Started
       type: basic
 ---
-## Introduction
-
 **CICDoo** is a managed platform for deploying, running, and maintaining Odoo instances across any number of servers. It provides a unified control plane for the full lifecycle of an Odoo deployment:
 
 - Connect your own Linux servers on any cloud provider over SSH.
