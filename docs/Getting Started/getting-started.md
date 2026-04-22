@@ -1,31 +1,41 @@
 ---
 title: Welcome to cıcdoo
 excerpt: >-
-  Welcome to cıcdoo - is a hosting platform for Odoo. You bring your servers (or
-  use ours), connect your Git repos, and deploy Odoo environments from a single
-  dashboard.  The main thing that sets it apart: you can run 3-10 Odoo projects
-  on one server instead of paying for a separate server per project.
+  Welcome to cıcdoo - is a deployment platform for Odoo. You bring your servers,
+  connect your Git repos, and deploy Odoo environments from a single dashboard. 
+  The main thing that sets it apart: you can run any number of Odoo projects
+  from different versions and edition on one server instead of paying for a
+  separate server per project or paying for workers.
 hidden: false
 ---
-# Quick Start
+# Who is it for ? 
 
-Get your first Odoo environment running in under 5 minutes:
-
-# How-To Guides
-
-Quick, practical guides to help you get things done:
-
-### Getting Started
-
-Deploy Your First Odoo - Zero to running Odoo
+- Odoo agencies managing multiple client projects
+- Developers who want staging and production environments without managing infrastructure themselves
+- Companies running Odoo internally who want control over their infrastructure
 
 
-Migrate from Odoo.sh - Move your existing project
 
-### Operations
+# Key Features
 
-<br />
-
-### Scaling & Configuration
+- Paid SSL Certificates ( Not Free Let's encrypt )
+- Time Machine ( rewind Odoo to previous revisions )
+- Automated Backup ( Dynamic scheduling )
+- Database Anonymization ( Development Instances )
+- Manage Odoo Config 
+- Manage PostgreSQL Config 
+- Manage Nginx Config
+- Manage Docker Containers ( Memory and CPU allocations )
+- Manage external repositories ( Submodules )
+- Patented S3 Client 
+- 100% complete data sovereignty
+- Unlimited custom domains
+- FREE CICDOO subdomains
+- Same server cross Odoo versions and edition deployments
+- Real-time Monitoring & Logging
+- AI monitor & log analysis
+- Action queues & audit log
+- Integrated Code Editor
+- Database ssh tunneling
 
 <br />
