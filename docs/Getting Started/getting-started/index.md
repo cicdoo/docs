@@ -3,8 +3,8 @@ title: Welcome to cıcdoo
 hidden: false
 next:
   pages:
-    - slug: getting-started
-      title: Getting Started
+    - slug: quick-start
+      title: Quick-start
       type: basic
 ---
 **CICDoo** is a managed platform for deploying, running, and maintaining Odoo instances across any number of servers. It provides a unified control plane for the full lifecycle of an Odoo deployment:
