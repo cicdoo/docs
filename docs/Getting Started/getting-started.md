@@ -1,6 +1,11 @@
 ---
 title: Welcome to cıcdoo
 hidden: false
+next:
+  pages:
+    - slug: getting-started
+      title: Getting Started
+      type: basic
 ---
 ## Introduction
 
