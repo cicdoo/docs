@@ -28,6 +28,8 @@ Displays your current plan (e.g., Free) and quota consumption (servers used / li
 
 ### Recent Deployments
 
+![](https://files.readme.io/40e8fb9eb1e420bcc0cc32d763a2f851bea9f98ce86936e1ee3a6b7ee9863080-image.png)
+
 A live-updating table showing the last five queue jobs. The table refreshes automatically every five seconds. Columns include:
 
 - Server name
@@ -40,5 +42,9 @@ A live-updating table showing the last five queue jobs. The table refreshes auto
 Click the **log icon** on any row to open the full deployment log in a modal window.
 
 ### Quick Actions
+
+
+<Image src="https://files.readme.io/7d59e9181ac01844e7c83c504f64882f4eca5f0979f4fa04612899a561d34961-image.png" align="center" width="50%" border={true} />
+
 
 Shortcut buttons for the most common tasks, accessible directly from the dashboard without navigating to a specific resource.
