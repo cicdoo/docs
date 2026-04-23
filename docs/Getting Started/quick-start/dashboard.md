@@ -9,6 +9,8 @@ metadata:
 
 The dashboard is the first screen you see after logging in. It provides a live overview of your platform.
 
+![](https://files.readme.io/3511e3eef356e81f3a8b516b07c36228f15cb4fe28a693c8692af134b45fbffb-image.png)
+
 ### Stats Grid
 
 Four summary tiles at the top of the page show:
