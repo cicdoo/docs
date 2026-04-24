@@ -31,7 +31,6 @@ unixodbc
 unixodbc-dev
 odbcinst
 tdsodbc
-
 ```
 
 Restart instance and in your custom module  you can connect to your `MSSQL` by constructing connection string using FreeTDS OBDC Driver.
