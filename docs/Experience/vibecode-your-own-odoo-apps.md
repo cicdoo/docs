@@ -32,7 +32,11 @@ After adding this identifier, restart the Odoo instance. On every subsequent sta
 Our platform lets developers declare extra IDE extensions per project through a dedicated configuration field in the **Advanced** tab:
 
 1. From your CICDOO project dashboard, open **Project Settings**
+
+   ![](https://files.readme.io/76763a17311e75efc4bb6d05cdd2cc05a77d99eec65673f793e7ebb96919297b-image.png)
 2. Navigate to the **Advanced** tab
+
+   ![](https://files.readme.io/66805f94c17023f0947fb9a16a4eab53b8884353f35f8ca080fad0a6425621f3-image.png)
 3. Locate the **IDE Extensions** field (accepts a comma-separated or line-separated list of extension IDs)
 4. Add the Claude extension identifier:<br />`Claude.claude-dev`
 
@@ -49,9 +53,13 @@ Once the instance restarts:
 
 - Open the Extensions panel (`Ctrl+Shift+X`)
 - Search for "@installed Claude"
+
+  ![](https://files.readme.io/eb778ed7c447db854943c12dd926dc8251972caebebc8edc5c87508574622597-image.png)
 - The Claude icon should appear in the activity bar (typically a chat bubble or Claude logo)
 
 4. Authenticate with your Anthropic API key when prompted (this credential is not persisted across container resets – configure via environment variables for automation)
+
+   ![](https://files.readme.io/61d269269c722e2bcf3a8d6276b20c539a944a39b9253aee48efcb72339f3d72-image.png)
 
 ## Key Technical Notes
 
