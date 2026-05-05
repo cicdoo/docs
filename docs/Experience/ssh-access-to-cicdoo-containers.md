@@ -60,8 +60,8 @@ The `-t` on `ssh` is required so that interactive flags (`-it`) get a real TTY.
 If you manage multiple servers, define one alias per server:
 
 ```bash
-alias rdocker-milan='ssh -t -i ~/Downloads/milan.pem ubuntu@15.160.109.63 sudo docker'
-alias rdocker-fra='ssh   -t -i ~/Downloads/fra.pem    ubuntu@10.0.0.42       sudo docker'
+alias rdocker-milan='ssh -t -i ~/Downloads/milan.pem ubuntu@HOST_IP sudo docker'
+alias rdocker-fra='ssh   -t -i ~/Downloads/fra.pem    ubuntu@HOST_IP       sudo docker'
 ```
 
 ## Alternative — Docker context over SSH (no alias)
@@ -70,7 +70,7 @@ If your local user can run `docker` on the remote without `sudo` (i.e. is in the
 
 ```bash
 # One-time setup
-docker context create milan --docker "host=ssh://ubuntu@15.160.109.63"
+docker context create milan --docker "host=ssh://ubuntu@HOST_IP"
 
 # Use it
 docker context use milan
@@ -84,7 +84,7 @@ docker context use default
 For SSH key selection, pin it via `~/.ssh/config`:
 
 ```text
-Host 15.160.109.63
+Host HOST_IP
     User ubuntu
     IdentityFile ~/Downloads/milan.pem
     IdentitiesOnly yes
