@@ -5,8 +5,6 @@ hidden: false
 metadata:
   robots: index
 ---
-# Authorizing GitHub in CICDoo with Organization Access
-
 ## Overview
 
 This guide explains how to authorize GitHub inside CICDoo and grant access to repositories that belong to a GitHub organization.
